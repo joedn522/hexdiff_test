@@ -1,0 +1,19 @@
+Source: hexdiff
+Section: devel
+Priority: extra
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Tanguy Herrmann <dolanor@evereska.org>
+Build-Depends: cdbs, debhelper (>= 7), libncurses5-dev
+Standards-Version: 3.8.0
+Homepage: http://tboudet.free.fr/hexdiff/
+
+Package: hexdiff
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Visual hexadecimal difference editor
+ Editor to visualize binary differences in hexadecimal between 2 files.
+ The editor open in an horizontal split view with each file per view.
+ Each view has 3 columns : offset, hexadecimal output, ASCII output.
+ Differences are highlighted by having the background color inverted.
+ Some crucial information are displayed as current offset, etc...
+ Has shortcut to move into the file, to the next difference, etc...

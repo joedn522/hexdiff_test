@@ -1,0 +1,31 @@
+#
+#	fichier de configuration pour Hexdiff
+#	http://tboudet.free.fr/hexdiff/
+#
+
+# enable (1) or disable (0) display of chars
+# with a code > 127. charset dependant.
+# you can toogle this flag with the 7 and 8 keys
+show_8bits  1
+
+# enable or disable usage of semi-graphic chars
+# around the various popup windows.
+nice_border 0
+
+# select decimal or hexa display of file offset.
+# the key 'H' switch interactively beetwen the two modes.
+offsets_in_hex  0
+# sorry, at this time, no octal offset display...
+
+# if set to 1, display the id of user and group 
+# in the fileinfo popup (access by 'i' or 'I' key
+ext_fileinfo 1
+
+# those flags is not yet used...
+language fr
+asciiview 0
+
+# is the file selector display hidden file ?
+show_hidden 0
+
+

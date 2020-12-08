@@ -1,0 +1,69 @@
+12 Février 2009
+	- Changed manpage name to automatically detect lang
+
+21 Septembre 2005
+	- Added the left/right cursor wrapping in the asciiview.
+
+27 Juin 2005
+	- the function select_new_file have two new arguments: first for max len
+	  of destination string, second for future flags.
+
+4 Jan 2005
+	- manpage debugged, code audited, pastis drinked.
+
+15 Dec 2004
+	- little bug in asciiview on xterm corrected.
+
+30 Nov 2004:
+	- asciiview works for me. Activate with 'A', browse the 
+	  1k page with arrows key, switch file with <tab>.
+
+27 Octobre 2004:
+	- start of a new function: asciiview !
+
+20 Novembre 2003:
+	- I'm adding various sort options to the file selector. May be,
+	  this will work for the next release ?
+
+12 Novembre 2003:
+	- added a quick and dirty file selector. need more work.
+	  the display is very slow. no sorting of files.
+
+17 Octobre 2003:
+	- Version string is now defined in the Makefile
+
+11 Février 2003:
+	- With the 'I' key, you get _two_ file infos popups, and just
+	  for the price of _one_ ! Marvellous !
+
+5 Novembre 2002:
+	- added a file informations popup. need more work.
+
+14 Octobre 2002:
+	- now, file offsets (left column) can be displayed in hexadecimal.
+          .hexdiffrc flag name is 'offsets_in_hex'. Toggle key is 'H'.
+	  Many thanks to Mark Glines for this nice idea.
+
+16 Juillet 2002:
+	- display of iso-latin1 characters is working.
+
+Juillet 2002:
+	- le parser du fichier de conf marche, mais il n'y a pas
+	  grand chose à configurer pour le moment:
+	     * le type de bordure pour les fenètres.
+	     * la langue ?
+
+22 Mai 2002:
+	- début de la lecture du fichier de configuration, bien que je
+	  je sache pas encore quoi y mettre... En plus, à la lecture
+	  du source (parse_rc.c), vous verrez que je TRACE féroce.
+
+25 Avril 2002:
+	- rajout d'une option de compilation:
+		pour les systemes qui ne supportent pas les jolis bordures
+		de fenètres avec les caractères semi-graphiques, un
+		#define NICE_BORDER est dans le Makefile.
+
+12 Avril 2002:
+	- réorganisation des sources.
+

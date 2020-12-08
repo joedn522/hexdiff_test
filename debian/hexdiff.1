@@ -1,0 +1,106 @@
+.TH HexDiff 1 "February 2009" "TontonTh tools" "User Commands"
+
+.SH NAME
+hexdiff \- 'hexadecimal visual diff' for binary files
+
+.SH SYNOPSIS
+\fBhexdiff\fP [\-V] [\-h|\-?] file1 file2
+
+.SH DESCRIPTION
+\fBhexdiff\fP display an horizontally splitted hexadecimal view of the files compared. 
+.P
+The right column display the ASCII view of the files. 
+A status bar on the bottom display the filename, its size, and the current offset.
+The current view is marked with '**' on the left side of the view.
+When moving the cursor into the file, differences will be displayed by 'inverting' colors.
+
+.SH OPTIONS
+.B \-V
+display the program version.
+.br
+.B \-h | -?
+display the program help.
+.br
+.B \-X
+Help for debugging your ~/.hexdiffrc, or the rc file parser.
+
+.SH KEYBOARD COMMANDS
+.B x q
+Exit the program.
+.br
+.B u j U
+Move cursor up for 1 line, or 4, inside the 2 files.
+.br
+.B d k D
+Move cursor down for 1 line, or 4, inside the 2 files.
+.br
+.B <space>
+Move cursor for several lines. (Depends on the display size)
+.br
+.B 0 <home>
+Move cursor at the beginning.
+.br
+.B $
+Move cursor to the end of the most little file of both.
+.br
+.B g
+Move cursor to the offset input.
+.br
+.B H
+Switch offset display between decimal and hexadecimal. (initial mode is settable)
+.br
+.B i
+Display \fBfstat\fP for the current file selected.
+.br
+.B I 
+Display \fBfstat\fP for both filess.
+.br
+.B A
+Open the (currently) experimental AsciiViewer.
+Maybe coredump with no request. <tab> switch as usual.
+.br
+.B ^O
+Open a new file into the main view.
+\fIQ\fP to cancel, \fI<Enter>\fP to validate, \fI?\fP for help.
+.br
+.B n
+Move cursor to next difference between files.
+.br
+.B <tab>
+Switch the current view.
+.br
+.B ? 
+Display the pop-up help view about the main commands.
+
+.SH CONFIG FILE
+.B $HOME/.hexdiffrc
+
+.SH SEE ALSO
+.PP
+\fIdiff (1)\fR,
+\fIcmp (1)\fR,
+\fI/usr/share/doc/hexdiff/examples/hexdiff.rc\fR
+
+.SH BUGS
+If you resize your xterm windows \fBhexdiff\fP may become unstable for a few.
+.br
+The end of file display may be broken if files are from differents sizes.
+
+.SH AUTHORS
+Thierry Boudet aka 
+.B tTh
+<tboudet@free.fr>
+
+This  manual  page  was  written  by Tanguy Herrmann <dolanor@evereska.org>, for the Ubuntu GNU/Linux system (but may be used by others).
+.SH WEBSITE
+<http://tboudet.free.fr/hexdiff/>
+
+.SH THANKS
+This software is dedicated to the trollers kamarades from the HardStory team of CULTe, without whom nothing would have been possible. <http://www.culte.org>
+.SH COPYRIGHT
+Copyright \(co 2008  Thierry Boudet
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+.br
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+

@@ -1,0 +1,14 @@
+
+	VISUAL HEXDIFF: les nombreux bugs:
+
+	-----------------------------------------------------------
+
+	tous les écrans n'ont pas 80 colonnes...
+
+	la page de man est mal écrite et pas synchrone avec le code.
+
+	la fonction de saisie d'un "long" est codée par un goret.
+
+	le sélecteur de fichier ne permet pas de changer de répertoire.
+
+	-----------------------------------------------------------

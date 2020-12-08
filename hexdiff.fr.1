@@ -1,0 +1,129 @@
+.TH HexDiff 1 "November 1905" "Divers Un*ces" "TontonTh tools"
+
+.SH NAME
+hexdiff \- un 'visuel diff' pour les fichiers binaires
+
+.SH SYNOPSIS
+\fBhexdiff\fP -V
+.br
+\fBhexdiff\fP -h|-?
+.br
+\fBhexdiff\fP file1 file2
+
+.SH DESCRIPTION
+\fBhexdiff\fP a été crée pour faciliter le débuggage de routines d'écriture
+de fichiers images (PCX et BMP, comme par hasard). En comparant un fichier
+kimarche et un fichier que je fabrique, ça va aider :)
+.br
+\fBhexdiff\fP affiche, après le lancement, deux fenètres montrant un dump
+hexadécimal et ascii du début des deux fichiers. Deux barres d'état
+donnent le nom du fichier, sa taille et l'offset courant.
+La fenêtre courante est marquée par '**' à gauche de l'écran.
+A l'aide de diverses touches du clavier, vous pouvez vous déplacer 
+simultanément dans les deux fichiers, et le dump vous montrera alors,
+en vidéo inverse, les octets qui sont différents entre les deux fichiers.
+Après, hein, c'est à vous d'interpréter...
+
+.SH OPTIONS
+.B -V
+Pour connaitre la version du machin-bidule.
+.br
+.B -h | -?
+Ah, il y a un peu de l'aide. Bon à savoir.
+.br
+.B -X
+Help for debugging your ~/.hexdiffrc, or the rc file parser.
+
+.SH KEYBOARD COMMANDS
+.B x q
+Quitte le programme. Parfois...
+.br
+.B u j U
+Remonte d'une ligne (de 16 octets), ou de quatre, dans les deux fichiers.
+.br
+.B d k D
+Descend d'une ou quatre lignes dans les deux fichiers.
+.br
+.B <space>
+Descend de plusieurs lignes dans les deux fichiers. Ce nombre étant calculé
+selon la taille de l'écran, je ne peux le révéler ici.
+.br
+.B 0 <home>
+Reprend au début des deux fichiers.
+.br
+.B $
+Vous emmène aux environs de juste avant la fin du plus petit des deux fichiers.
+.br
+.B g
+Propose de saisir un nouvel offset pour les deux fichiers. Attention, cette
+fonctions a été écrite à la 'Gruik' et n'est donc pas fiable.
+.br
+.B H
+Bascule l'affichage des offsets entre le décimal et l'hexadécimal. Le mode
+initial est configurable.
+.br
+.B i
+Affichage des informations 'fstat' sur le fichier sélectionné.
+.br
+.B I 
+Affiche les mêmes informations, mais pour les deux fichiers simultanément.
+.br
+.B A
+Open the (currently) experimental AsciiViewer.
+Maybe coredump with no request. <tab> switch as usual.
+.br
+.B ^O
+Ouverture d'un nouveau fichier dans la fenêtre courante. Le "selecteur de
+fichier" est encore rudimentaire. Utiliser 'Q' pour annuler, <Enter> pour
+valider, et '?' pour l'aide.
+.br
+.B n
+Part à la recherche de la prochaine différence entre les deux fichiers.
+.br
+.B <tab>
+Change la fenètre active. Pour le moment, ça ne sert presque à rien.
+Ah, non, il parait que ça joue sur le contexte d'autres fonctions.
+Personne ne m'en a parlé, je ne suis au courant de rien, alors
+je --->[]
+.br
+.B ? 
+"Popupe" une fenètre d'aide reprenant les principales commandes. Pour
+les autres commandes: un seul slogan, Utsl.
+
+.SH CONFIG FILE
+Le fichier de configuration est
+.B .hexdiffrc
+et doit se trouver dans le
+.B $HOME
+de l'utilisateur.
+Une ligne commençant par un
+.B '#'
+est un commentaire. Les lignes vides sont ignorées. Pour plus de détails,
+consulter le fichier 'hexdiff.rc' qui devrait se trouver dans l'archive.
+
+.SH SEE ALSO
+.BR diff (1),
+.BR cmp (1)
+
+.SH BUGS
+Si vous redimensionnez votre xterm, \fBhexdiff\fP se prend un SIGWINCH,
+et s'en va probablement visiter le pays des Slashies. Dans la pratique,
+il en revient très vite.
+.br
+L'affichage en fin de fichier, si les tailles sont différentes, est
+parfois un peu déglingué. Mais je vais réparer ça.
+.br
+Cette page de man n'est pas synchrone avec la réalité virtuelle du code.
+Car le code évolue plus vite que la réalité. Parfois.
+
+.SH AUTHOR
+Thierry Boudet aka 
+.B tTh
+qui 'spleytise' avec vigueur ce petit programme depuis Mars 2002.
+Pour en savoir un peu plus sur ce logiciel:
+http://tboudet.free.fr/hexdiff/ et sur moi: http://tontonth.free.fr/plop/
+
+.SH DEDICACE
+Ce logiciel est dédié aux kamarades trolleurs de l'équipe HardStory du
+CULTe, sans qui rien n'est pas faisable. <http://www.culte.org/>
+

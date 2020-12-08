@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+UPSTREAM_VERSION := $(shell dpkg-parsechangelog \
+| grep "^Version:" \
+| sed -e "s/^Version:[[:space:]]*\([0-9\.]*\)-.*/\1/g")
+
+CFLAGS=-DVERSION=\\\"$(UPSTREAM_VERSION)\\\" -DTRACE=0 -ansi
+LDFLAGS=-lncurses
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/makefile.mk
+
+
+# Add here any variable or target overrides you need.
+

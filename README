@@ -1,0 +1,16 @@
+
+
+	look at:
+		- the Makefile
+		- the man page
+		- the source code
+
+	website:
+		http://tboudet.free.fr/hexdiff/
+
+	installation:
+		1) run make
+		2) patch
+		3) goto 1
+
+
